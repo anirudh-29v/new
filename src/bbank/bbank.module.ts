@@ -8,10 +8,11 @@ import { DonarSchema } from './donar.schema';
 import { patientSchema } from './patient.schema';
 
 @Module({
-  imports:[MongooseModule.forFeature([{name:'bank',schema:BbankSchema}]),
-  MongooseModule.forFeature([{name:'login',schema:LoginSchema}]),
-  MongooseModule.forFeature([{name:'donar',schema:DonarSchema}]),
-  MongooseModule.forFeature([{name:'patient',schema:patientSchema}])
+  imports:[MongooseModule.forFeature([
+    {name:'bank',schema:BbankSchema},
+    {name:'login',schema:LoginSchema},
+    {name:'donar',schema:DonarSchema},
+    {name:'patient',schema:patientSchema}])
 ],
   controllers: [BbankController],
   providers: [BbankService]
